@@ -38,8 +38,8 @@ public class BlueprintsServices {
         
     }
     
-    public Set<Blueprint> getAllBlueprints(){
-        return null;
+    public Set<Blueprint> getAllBlueprints() throws BlueprintNotFoundException {
+        return bpp.getAllBluePrints();
     }
     
     /**
@@ -66,6 +66,10 @@ public class BlueprintsServices {
 
     public Set<Blueprint> getBlueprintsByAuthorFiltered(String author) throws BlueprintNotFoundException{
         return bpp.getBlueprintsByAuthor(author);
+    }
+
+    public void deleteBlueprint (String author, String name) throws BlueprintNotFoundException {
+        bpp.deleteBlueprint(author,name);
     }
     
 }

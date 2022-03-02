@@ -22,6 +22,8 @@ public interface BlueprintsPersistence {
      *    or any other low-level persistence error occurs.
      */
     public void saveBlueprint(Blueprint bp) throws BlueprintPersistenceException;
+
+
     
     /**
      * 
@@ -33,5 +35,10 @@ public interface BlueprintsPersistence {
     public Blueprint getBlueprint(String author,String bprintname) throws BlueprintNotFoundException;
 
     Set<Blueprint> getBlueprintsByAuthor (String author) throws BlueprintNotFoundException;
+
+    Set<Blueprint> getAllBluePrints() throws  BlueprintNotFoundException;
+
+    public void deleteBlueprint (String author, String name) throws BlueprintNotFoundException;
+
     
 }
