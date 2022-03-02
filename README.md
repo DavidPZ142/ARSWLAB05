@@ -4,7 +4,6 @@
 ### Arquitecturas de Software
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
 * **David Pérez**    [David Pérez](https://github.com/DavidPZ666)
 * **Nicolas Camacho** [Nicolas Camacho](https://github.com/Haatom)
