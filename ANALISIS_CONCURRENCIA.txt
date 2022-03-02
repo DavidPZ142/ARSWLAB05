@@ -1,0 +1,14 @@
+¿Qué condiciones de carrera se podrían presentar?
+
+- Modificar un plano al tiempo que se estan consultando los planos.
+- Agregar un nuevo plano al tiempo que ese estan consultando los planos.
+
+¿Cuáles son las respectivas regiones críticas?
+
+- Las regiones críticas se encuentran en los metodos (PUT, GET, POST), ya que son a los cuales el controloador llama directamente, y generar deadlocks o comportamientos indesados en el servicio web
+
+Solución:
+
+- Identificamos que las condiciones de carrera se enfrentaban al momento de acceder al 
+recurso compartido HashMap blueprints, por lo tanto lo solucionamos cambiando el tipo de este a
+ConcurrentHashMap, que es una clase ThreadSafe, solucionando los problemas y deadlocks que puedan surgir
